@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>The Elements of Online</title>
+  <style>
+    body{
+      background:#0e0e0e;
+      color:#fff;
+      font-family:"Lexend",system-ui,sans-serif;
+      margin:0;
+      padding:0 2rem 3rem;
+      scroll-behavior:smooth;
+    }
+    nav{
+      position:sticky;
+      top:0;
+      background:#0e0e0e;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      padding:.75rem 0;
+      border-bottom:1px solid #333;
+      z-index:1000;
+    }
+    .nav-links a{
+      color:#4da6ff;
+      text-decoration:none;
+      margin-left:1rem;
+      font-size:.875rem;
+    }
+    .nav-links a:hover{text-decoration:underline;}
+    nav h1{
+      font-size:1.5rem;
+      margin:0;
+    }
+    h2{
+      font-size:1.25rem;
+      margin:2rem 0 1rem;
+      color:#4da6ff;
+    }
+    section{padding:2rem 0;}
+    .grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(160px,1fr));
+      gap:1rem;
+    }
+    .card-wrapper{
+      perspective:1000px;
+    }
+    .flip{
+      position:relative;
+      width:100%;
+      height:160px;
+      transform-style:preserve-3d;
+      transition:transform .8s ease;
+      cursor:pointer;
+    }
+    .card-wrapper:hover .flip,
+    .card-wrapper input:checked + label .flip{
+      transform:rotateY(180deg);
+    }
+    .side{
+      position:absolute;
+      top:0;left:0;right:0;bottom:0;
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      justify-content:center;
+      border-radius:8px;
+      background:#1a1a1a;
+      box-shadow:0 2px 6px rgba(0,0,0,.4);
+      backface-visibility:hidden;
+      padding:1rem;
+    }
+    .back{transform:rotateY(180deg);box-shadow:0 4px 10px rgba(0,0,0,.6);}
+    .symbol{font-weight:700;font-size:1.5rem;}
+    .name{font-size:.875rem;color:#4da6ff;margin-top:.25rem;}
+    .line{font-size:.75rem;color:#ccc;margin-top:.25rem;text-align:center;}
+    @media(max-width:480px){
+      body{padding:0 1rem 3rem;}
+      nav{padding:.5rem 0;}
+      nav h1{font-size:1.25rem;}
+      section{padding:1rem 0;}
+      .grid{grid-template-columns:repeat(2,1fr);}
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <h1>The Elements of Online</h1>
+    <div class="nav-links">
+      <a href="#writing">Writing</a>
+      <a href="#community">Community</a>
+    </div>
+  </nav>
+  <section id="writing">
+    <h2>Writing</h2>
+    <div class="grid">
+      <div class="card-wrapper">
+        <input type="checkbox" id="e-h" hidden>
+        <label for="e-h">
+          <div class="flip">
+            <div class="side front">
+              <div class="symbol">H</div>
+              <div class="name">Honesty</div>
+              <div class="line">Say what’s true. No dressing it up.</div>
+            </div>
+            <div class="side back">
+              <div class="line">More coming soon…</div>
+            </div>
+          </div>
+        </label>
+      </div>
+      <div class="card-wrapper">
+        <input type="checkbox" id="e-cl" hidden>
+        <label for="e-cl">
+          <div class="flip">
+            <div class="side front">
+              <div class="symbol">Cl</div>
+              <div class="name">Clarity</div>
+              <div class="line">Write with purpose and precision.</div>
+            </div>
+            <div class="side back">
+              <div class="line">More coming soon…</div>
+            </div>
+          </div>
+        </label>
+      </div>
+      <div class="card-wrapper">
+        <input type="checkbox" id="e-tr" hidden>
+        <label for="e-tr">
+          <div class="flip">
+            <div class="side front">
+              <div class="symbol">Tr</div>
+              <div class="name">Transparency</div>
+              <div class="line">Show sources. Share context.</div>
+            </div>
+            <div class="side back">
+              <div class="line">More coming soon…</div>
+            </div>
+          </div>
+        </label>
+      </div>
+      <div class="card-wrapper">
+        <input type="checkbox" id="e-re" hidden>
+        <label for="e-re">
+          <div class="flip">
+            <div class="side front">
+              <div class="symbol">Re</div>
+              <div class="name">Respect</div>
+              <div class="line">Treat your audience like people.</div>
+            </div>
+            <div class="side back">
+              <div class="line">More coming soon…</div>
+            </div>
+          </div>
+        </label>
+      </div>
+      <div class="card-wrapper">
+        <input type="checkbox" id="e-ac" hidden>
+        <label for="e-ac">
+          <div class="flip">
+            <div class="side front">
+              <div class="symbol">Ac</div>
+              <div class="name">Attribution</div>
+              <div class="line">Credit work and ideas you build on.</div>
+            </div>
+            <div class="side back">
+              <div class="line">More coming soon…</div>
+            </div>
+          </div>
+        </label>
+      </div>
+    </div>
+  </section>
+  <section id="community">
+    <h2>Community</h2>
+    <div class="grid">
+      <div class="card-wrapper">
+        <input type="checkbox" id="e-co" hidden>
+        <label for="e-co">
+          <div class="flip">
+            <div class="side front">
+              <div class="symbol">Co</div>
+              <div class="name">Consistency</div>
+              <div class="line">Keep tone and style aligned.</div>
+            </div>
+            <div class="side back">
+              <div class="line">More coming soon…</div>
+            </div>
+          </div>
+        </label>
+      </div>
+      <div class="card-wrapper">
+        <input type="checkbox" id="e-ed" hidden>
+        <label for="e-ed">
+          <div class="flip">
+            <div class="side front">
+              <div class="symbol">Ed</div>
+              <div class="name">Editing</div>
+              <div class="line">Polish until it’s clear and concise.</div>
+            </div>
+            <div class="side back">
+              <div class="line">More coming soon…</div>
+            </div>
+          </div>
+        </label>
+      </div>
+      <div class="card-wrapper">
+        <input type="checkbox" id="e-su" hidden>
+        <label for="e-su">
+          <div class="flip">
+            <div class="side front">
+              <div class="symbol">Su</div>
+              <div class="name">Substance</div>
+              <div class="line">Provide value, not fluff.</div>
+            </div>
+            <div class="side back">
+              <div class="line">More coming soon…</div>
+            </div>
+          </div>
+        </label>
+      </div>
+      <div class="card-wrapper">
+        <input type="checkbox" id="e-in" hidden>
+        <label for="e-in">
+          <div class="flip">
+            <div class="side front">
+              <div class="symbol">In</div>
+              <div class="name">Inclusivity</div>
+              <div class="line">Write so anyone can engage.</div>
+            </div>
+            <div class="side back">
+              <div class="line">More coming soon…</div>
+            </div>
+          </div>
+        </label>
+      </div>
+      <div class="card-wrapper">
+        <input type="checkbox" id="e-ex" hidden>
+        <label for="e-ex">
+          <div class="flip">
+            <div class="side front">
+              <div class="symbol">Ex</div>
+              <div class="name">Experimentation</div>
+              <div class="line">Try new things. Learn. Iterate.</div>
+            </div>
+            <div class="side back">
+              <div class="line">More coming soon…</div>
+            </div>
+          </div>
+        </label>
+      </div>
+    </div>
+  </section>
+</body>
+</html>
