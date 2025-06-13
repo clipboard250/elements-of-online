@@ -17,192 +17,56 @@
       margin-bottom: 2rem;
     }
     .table {
-      max-width: 920px;
-      margin: 0 auto;
-      padding: 2rem;
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-      gap: 1.5rem;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 1rem;
     }
     .element {
-      perspective: 800px;
-    }
-    .element input {
-      display: none;
-    }
-    .card {
-      position: relative;
       background: #1a1a1a;
       border: 1px solid #333;
-      border-radius: 8px;
       padding: 1rem;
       text-align: center;
-      cursor: pointer;
-      transform-style: preserve-3d;
-      transition: transform 0.6s;
-      min-height: 120px;
-    }
-    .element:hover .card,
-    .element input:checked + .card {
-      transform: rotateY(180deg);
-    }
-    .front,
-    .back {
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      backface-visibility: hidden;
       border-radius: 8px;
+      transition: transform 0.2s ease, background 0.2s ease;
+      perspective: 800px;
     }
-    .back {
+    .element:hover {
+      background: #2a2a2a;
       transform: rotateY(180deg);
-      padding: 0 0.5rem;
-      background: #1a1a1a;
     }
     .symbol {
-      font-size: 1.5rem;
+      font-size: 1.25rem;
       font-weight: bold;
     }
     .name {
       font-size: 0.875rem;
       color: #4da6ff;
-      margin-top: 0.25rem;
     }
     .line {
       font-size: 0.75rem;
       color: #ccc;
+      margin-top: 0.5rem;
     }
   </style>
 </head>
 <body>
   <h1>The Elements of Online</h1>
   <div class="table">
-    <div class="element">
-      <input type="checkbox" id="el-h">
-      <label class="card" for="el-h">
-        <div class="front">
-          <div class="symbol">H</div>
-          <div class="name">Honesty</div>
-        </div>
-        <div class="back">
-          <div class="line">Say what’s true. No dressing it up.</div>
-        </div>
-      </label>
-    </div>
-    <div class="element">
-      <input type="checkbox" id="el-cl">
-      <label class="card" for="el-cl">
-        <div class="front">
-          <div class="symbol">Cl</div>
-          <div class="name">Clarity</div>
-        </div>
-        <div class="back">
-          <div class="line">Write with purpose and precision.</div>
-        </div>
-      </label>
-    </div>
-    <div class="element">
-      <input type="checkbox" id="el-tr">
-      <label class="card" for="el-tr">
-        <div class="front">
-          <div class="symbol">Tr</div>
-          <div class="name">Transparency</div>
-        </div>
-        <div class="back">
-          <div class="line">Show sources. Share context.</div>
-        </div>
-      </label>
-    </div>
-    <div class="element">
-      <input type="checkbox" id="el-re">
-      <label class="card" for="el-re">
-        <div class="front">
-          <div class="symbol">Re</div>
-          <div class="name">Respect</div>
-        </div>
-        <div class="back">
-          <div class="line">Treat your audience like people.</div>
-        </div>
-      </label>
-    </div>
-    <div class="element">
-      <input type="checkbox" id="el-ac">
-      <label class="card" for="el-ac">
-        <div class="front">
-          <div class="symbol">Ac</div>
-          <div class="name">Attribution</div>
-        </div>
-        <div class="back">
-          <div class="line">Credit work and ideas you build on.</div>
-        </div>
-      </label>
-    </div>
-    <div class="element">
-      <input type="checkbox" id="el-co">
-      <label class="card" for="el-co">
-        <div class="front">
-          <div class="symbol">Co</div>
-          <div class="name">Consistency</div>
-        </div>
-        <div class="back">
-          <div class="line">Keep tone and style aligned.</div>
-        </div>
-      </label>
-    </div>
-    <div class="element">
-      <input type="checkbox" id="el-ed">
-      <label class="card" for="el-ed">
-        <div class="front">
-          <div class="symbol">Ed</div>
-          <div class="name">Editing</div>
-        </div>
-        <div class="back">
-          <div class="line">Polish until it’s clear and concise.</div>
-        </div>
-      </label>
-    </div>
-    <div class="element">
-      <input type="checkbox" id="el-su">
-      <label class="card" for="el-su">
-        <div class="front">
-          <div class="symbol">Su</div>
-          <div class="name">Substance</div>
-        </div>
-        <div class="back">
-          <div class="line">Provide value, not fluff.</div>
-        </div>
-      </label>
-    </div>
-    <div class="element">
-      <input type="checkbox" id="el-in">
-      <label class="card" for="el-in">
-        <div class="front">
-          <div class="symbol">In</div>
-          <div class="name">Inclusivity</div>
-        </div>
-        <div class="back">
-          <div class="line">Write so anyone can engage.</div>
-        </div>
-      </label>
-    </div>
-    <div class="element">
-      <input type="checkbox" id="el-ex">
-      <label class="card" for="el-ex">
-        <div class="front">
-          <div class="symbol">Ex</div>
-          <div class="name">Experimentation</div>
-        </div>
-        <div class="back">
-          <div class="line">Try new things. Learn. Iterate.</div>
-        </div>
-      </label>
-    </div>
+    <div class="element"><div class="symbol">H</div><div class="name">Honesty</div><div class="line">Say what’s true. No dressing it up.</div></div>
+    <div class="element"><div class="symbol">Cl</div><div class="name">Clarity</div><div class="line">Write with purpose and precision.</div></div>
+    <div class="element"><div class="symbol">Tr</div><div class="name">Transparency</div><div class="line">Show sources. Share context.</div></div>
+    <div class="element"><div class="symbol">Re</div><div class="name">Respect</div><div class="line">Treat your audience like people.</div></div>
+    <div class="element"><div class="symbol">Ac</div><div class="name">Attribution</div><div class="line">Credit work and ideas you build on.</div></div>
+    <div class="element"><div class="symbol">Co</div><div class="name">Consistency</div><div class="line">Keep tone and style aligned.</div></div>
+    <div class="element"><div class="symbol">Ed</div><div class="name">Editing</div><div class="line">Polish until it’s clear and concise.</div></div>
+    <div class="element"><div class="symbol">Su</div><div class="name">Substance</div><div class="line">Provide value, not fluff.</div></div>
+    <div class="element"><div class="symbol">In</div><div class="name">Inclusivity</div><div class="line">Write so anyone can engage.</div></div>
+    <div class="element"><div class="symbol">Ex</div><div class="name">Experimentation</div><div class="line">Try new things. Learn. Iterate.</div></div>
+    <div class="element"><div class="symbol">Ow</div><div class="name">Ownership</div><div class="line">Own your message. Own your mistakes.</div></div>
+    <div class="element"><div class="symbol">Cn</div><div class="name">Context</div><div class="line">If it’s missing, you’re misleading.</div></div>
+    <div class="element"><div class="symbol">Ai</div><div class="name">AI Disclosure</div><div class="line">Say when it's generated. Be honest.</div></div>
+    <div class="element"><div class="symbol">Fm</div><div class="name">Format</div><div class="line">Structure helps people stay with you.</div></div>
+    <div class="element"><div class="symbol">Ln</div><div class="name">Linking</div><div class="line">A post without a source is a leak.</div></div>
   </div>
 </body>
 </html>
