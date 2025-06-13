@@ -1,140 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
   <title>The Elements of Online</title>
   <style>
-    /* Base styles */
-    :root {
-      --bg: #0e0e0e;
-      --card-bg: #1a1a1a;
-      --border-radius: 0.75rem;
-      --shadow: 0 2px 6px rgba(0,0,0,0.35);
-      --text: #eaeaea;
-      --subtle: #bbbbbb;
-      --accent: #4da6ff;
-    }
-
-    html {
-      font-family: "Lexend", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
-      background: var(--bg);
-      color: var(--text);
-      line-height: 1.6;
-    }
-
     body {
+      font-family: "Lexend", system-ui, sans-serif;
+      background-color: #0e0e0e;
+      color: #fff;
       margin: 0;
       padding: 2rem;
-      max-width: 1200px;
-      margin-left: auto;
-      margin-right: auto;
     }
-
     h1 {
       text-align: center;
+      font-size: 2rem;
       margin-bottom: 2rem;
-      font-size: 2.5rem;
-      font-weight: 600;
     }
-
-    .grid {
+    .table {
       display: grid;
-      grid-template-columns: repeat(10, 1fr);
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
       gap: 1rem;
     }
-
-    @media (max-width: 1200px) {
-      .grid {
-        grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-      }
-    }
-
     .element {
-      background: var(--card-bg);
-      border-radius: var(--border-radius);
-      box-shadow: var(--shadow);
+      background: #1a1a1a;
+      border: 1px solid #333;
       padding: 1rem;
-      transition: transform 0.2s, box-shadow 0.2s;
+      text-align: center;
+      border-radius: 8px;
+      transition: transform 0.2s ease, background 0.2s ease;
     }
-
     .element:hover {
+      background: #2a2a2a;
       transform: translateY(-4px);
-      box-shadow: 0 4px 10px rgba(0,0,0,0.5);
     }
-
     .symbol {
-      font-size: 1.5rem;
-      font-weight: 600;
-      margin-bottom: 0.5rem;
+      font-size: 1.25rem;
+      font-weight: bold;
     }
-
     .name {
-      font-size: 1rem;
-      font-weight: 500;
-      color: var(--accent);
-      margin-bottom: 0.25rem;
-    }
-
-    .principle {
       font-size: 0.875rem;
-      color: var(--subtle);
+      color: #4da6ff;
+    }
+    .line {
+      font-size: 0.75rem;
+      color: #ccc;
+      margin-top: 0.5rem;
     }
   </style>
 </head>
 <body>
   <h1>The Elements of Online</h1>
-  <div class="grid">
-    <div class="element">
-      <div class="symbol">H</div>
-      <div class="name">Honesty</div>
-      <div class="principle">Say what’s true. No dressing it up.</div>
-    </div>
-    <div class="element">
-      <div class="symbol">Cl</div>
-      <div class="name">Clarity</div>
-      <div class="principle">Write with purpose and precision.</div>
-    </div>
-    <div class="element">
-      <div class="symbol">Tr</div>
-      <div class="name">Transparency</div>
-      <div class="principle">Show sources. Share context.</div>
-    </div>
-    <div class="element">
-      <div class="symbol">Re</div>
-      <div class="name">Respect</div>
-      <div class="principle">Treat your audience like people.</div>
-    </div>
-    <div class="element">
-      <div class="symbol">Ac</div>
-      <div class="name">Attribution</div>
-      <div class="principle">Credit work and ideas you build on.</div>
-    </div>
-    <div class="element">
-      <div class="symbol">Co</div>
-      <div class="name">Consistency</div>
-      <div class="principle">Keep tone and style aligned.</div>
-    </div>
-    <div class="element">
-      <div class="symbol">Ed</div>
-      <div class="name">Editing</div>
-      <div class="principle">Polish until it’s clear and concise.</div>
-    </div>
-    <div class="element">
-      <div class="symbol">Su</div>
-      <div class="name">Substance</div>
-      <div class="principle">Provide value, not fluff.</div>
-    </div>
-    <div class="element">
-      <div class="symbol">In</div>
-      <div class="name">Inclusivity</div>
-      <div class="principle">Write so anyone can engage.</div>
-    </div>
-    <div class="element">
-      <div class="symbol">Ex</div>
-      <div class="name">Experimentation</div>
-      <div class="principle">Try new things, learn, iterate.</div>
-    </div>
+  <div class="table">
+    <div class="element"><div class="symbol">H</div><div class="name">Honesty</div><div class="line">Say what’s true. No dressing it up.</div></div>
+    <div class="element"><div class="symbol">Cl</div><div class="name">Clarity</div><div class="line">Write with purpose and precision.</div></div>
+    <div class="element"><div class="symbol">Tr</div><div class="name">Transparency</div><div class="line">Show sources. Share context.</div></div>
+    <div class="element"><div class="symbol">Re</div><div class="name">Respect</div><div class="line">Treat your audience like people.</div></div>
+    <div class="element"><div class="symbol">Ac</div><div class="name">Attribution</div><div class="line">Credit work and ideas you build on.</div></div>
+    <div class="element"><div class="symbol">Co</div><div class="name">Consistency</div><div class="line">Keep tone and style aligned.</div></div>
+    <div class="element"><div class="symbol">Ed</div><div class="name">Editing</div><div class="line">Polish until it’s clear and concise.</div></div>
+    <div class="element"><div class="symbol">Su</div><div class="name">Substance</div><div class="line">Provide value, not fluff.</div></div>
+    <div class="element"><div class="symbol">In</div><div class="name">Inclusivity</div><div class="line">Write so anyone can engage.</div></div>
+    <div class="element"><div class="symbol">Ex</div><div class="name">Experimentation</div><div class="line">Try new things. Learn. Iterate.</div></div>
+    <div class="element"><div class="symbol">Ow</div><div class="name">Ownership</div><div class="line">Own your message. Own your mistakes.</div></div>
+    <div class="element"><div class="symbol">Cn</div><div class="name">Context</div><div class="line">If it’s missing, you’re misleading.</div></div>
+    <div class="element"><div class="symbol">Ai</div><div class="name">AI Disclosure</div><div class="line">Say when it's generated. Be honest.</div></div>
+    <div class="element"><div class="symbol">Fm</div><div class="name">Format</div><div class="line">Structure helps people stay with you.</div></div>
+    <div class="element"><div class="symbol">Ln</div><div class="name">Linking</div><div class="line">A post without a source is a leak.</div></div>
   </div>
 </body>
 </html>
