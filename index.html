@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>The Elements of Online</title>
+  <style>
+    body{
+      font-family:"Lexend",system-ui,sans-serif;
+      background:#0e0e0e;
+      color:#fff;
+      margin:0;
+      padding:2rem;
+    }
+    h1{margin:0 0 1rem;text-align:center;font-size:1.75rem;}
+    .table{
+      display:grid;
+      grid-template-columns:repeat(18,minmax(60px,1fr));
+      gap:.5rem;
+      max-width:1200px;
+      margin:0 auto;
+    }
+    .element{perspective:1000px;}
+    .card{
+      position:relative;
+      width:100%;
+      padding-top:100%;
+      transform-style:preserve-3d;
+      transition:transform .6s;
+      border-radius:8px;
+    }
+    .element:hover .card,
+    .element input:checked + label .card{
+      transform:rotateY(180deg);
+      box-shadow:0 0 8px var(--bg-color),0 0 16px var(--bg-color);
+    }
+    .face{
+      position:absolute;top:0;left:0;right:0;bottom:0;
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      justify-content:center;
+      border-radius:8px;
+      backface-visibility:hidden;
+      color:#000;
+    }
+    .back{transform:rotateY(180deg);background:#000;color:#fff;}
+    .number{font-size:.8rem;}
+    .symbol{font-size:1.4rem;font-weight:700;}
+    .name{font-size:.9rem;}
+    .line{font-size:.75rem;text-align:center;padding:0 .25rem;}
+    .writing{--bg-color:#00CFFF;}
+    .ethics{--bg-color:#FF4370;}
+    .structure{--bg-color:#C5FF00;color:#000;}
+    .audience{--bg-color:#BB6EFF;}
+    .attribution{--bg-color:#FFA31A;}
+    .ai{--bg-color:#00FFB3;color:#000;}
+    .strategy{--bg-color:#FF003C;}
+    .front{background:var(--bg-color);}
+    .spacer{visibility:hidden;}
+    @media(max-width:900px){
+      .table{grid-template-columns:repeat(9,minmax(60px,1fr));}
+    }
+    @media(max-width:480px){
+      body{padding:1rem;}
+      .table{grid-template-columns:repeat(6,minmax(60px,1fr));}
+    }
+    .lan-act{margin-top:2rem;text-align:center;color:#ccc;}
+  </style>
+</head>
+<body>
+<h1>The Elements of Online</h1>
+<div class="table">
+  <div class="element writing">
+    <input type="checkbox" id="e1" hidden>
+    <label for="e1">
+      <div class="card">
+        <div class="face front">
+          <div class="number">1</div>
+          <div class="symbol">Hn</div>
+          <div class="name">Honesty</div>
+        </div>
+        <div class="face back"><div class="line">More coming soon…</div></div>
+      </div>
+    </label>
+  </div>
+  <div class="spacer"></div>
+  <div class="spacer"></div>
+  <div class="spacer"></div>
+  <div class="spacer"></div>
+  <div class="spacer"></div>
+  <div class="spacer"></div>
+  <div class="spacer"></div>
+  <div class="spacer"></div>
+  <div class="spacer"></div>
+  <div class="spacer"></div>
+  <div class="spacer"></div>
+  <div class="spacer"></div>
+  <div class="spacer"></div>
+  <div class="spacer"></div>
+  <div class="spacer"></div>
+  <div class="spacer"></div>
+  <div class="element writing">
+    <input type="checkbox" id="e2" hidden>
+    <label for="e2">
+      <div class="card">
+        <div class="face front">
+          <div class="number">2</div>
+          <div class="symbol">Cl</div>
+          <div class="name">Clarity</div>
+        </div>
+        <div class="face back"><div class="line">More coming soon…</div></div>
+      </div>
+    </label>
+  </div>
+  <div class="element ethics">
+    <input type="checkbox" id="e3" hidden>
+    <label for="e3">
+      <div class="card">
+        <div class="face front">
+          <div class="number">3</div>
+          <div class="symbol">Tr</div>
+          <div class="name">Transparency</div>
+        </div>
+        <div class="face back"><div class="line">More coming soon…</div></div>
+      </div>
+    </label>
+  </div>
+  <div class="element ethics">
+    <input type="checkbox" id="e4" hidden>
+    <label for="e4">
+      <div class="card">
+        <div class="face front">
+          <div class="number">4</div>
+          <div class="symbol">Re</div>
+          <div class="name">Respect</div>
+        </div>
+        <div class="face back"><div class="line">More coming soon…</div></div>
+      </div>
+    </label>
+  </div>
+  <div class="spacer"></div>
+  <div class="spacer"></div>
+  <div class="spacer"></div>
+  <div class="spacer"></div>
+  <div class="spacer"></div>
+  <div class="spacer"></div>
+  <div class="spacer"></div>
+  <div class="spacer"></div>
+  <div class="spacer"></div>
+  <div class="spacer"></div>
+  <div class="element attribution">
+    <input type="checkbox" id="e5" hidden>
+    <label for="e5">
+      <div class="card">
+        <div class="face front">
+          <div class="number">5</div>
+          <div class="symbol">At</div>
+          <div class="name">Attribution</div>
+        </div>
+        <div class="face back"><div class="line">More coming soon…</div></div>
+      </div>
+    </label>
+  </div>
+  <div class="element structure">
+    <input type="checkbox" id="e6" hidden>
+    <label for="e6">
+      <div class="card">
+        <div class="face front">
+          <div class="number">6</div>
+          <div class="symbol">Cs</div>
+          <div class="name">Consistency</div>
+        </div>
+        <div class="face back"><div class="line">More coming soon…</div></div>
+      </div>
+    </label>
+  </div>
+  <div class="element writing">
+    <input type="checkbox" id="e7" hidden>
+    <label for="e7">
+      <div class="card">
+        <div class="face front">
+          <div class="number">7</div>
+          <div class="symbol">Ed</div>
+          <div class="name">Editing</div>
+        </div>
+        <div class="face back"><div class="line">More coming soon…</div></div>
+      </div>
+    </label>
+  </div>
+  <div class="element writing">
+    <input type="checkbox" id="e8" hidden>
+    <label for="e8">
+      <div class="card">
+        <div class="face front">
+          <div class="number">8</div>
+          <div class="symbol">Sb</div>
+          <div class="name">Substance</div>
+        </div>
+        <div class="face back"><div class="line">More coming soon…</div></div>
+      </div>
+    </label>
+  </div>
+  <div class="element audience">
+    <input type="checkbox" id="e9" hidden>
+    <label for="e9">
+      <div class="card">
+        <div class="face front">
+          <div class="number">9</div>
+          <div class="symbol">In</div>
+          <div class="name">Inclusivity</div>
+        </div>
+        <div class="face back"><div class="line">More coming soon…</div></div>
+      </div>
+    </label>
+  </div>
+  <div class="element strategy">
+    <input type="checkbox" id="e10" hidden>
+    <label for="e10">
+      <div class="card">
+        <div class="face front">
+          <div class="number">10</div>
+          <div class="symbol">Ex</div>
+          <div class="name">Experimentation</div>
+        </div>
+        <div class="face back"><div class="line">More coming soon…</div></div>
+      </div>
+    </label>
+  </div>
+  <div class="element strategy">
+    <input type="checkbox" id="e11" hidden>
+    <label for="e11">
+      <div class="card">
+        <div class="face front">
+          <div class="number">11</div>
+          <div class="symbol">Ow</div>
+          <div class="name">Ownership</div>
+        </div>
+        <div class="face back"><div class="line">More coming soon…</div></div>
+      </div>
+    </label>
+  </div>
+  <div class="element ethics">
+    <input type="checkbox" id="e12" hidden>
+    <label for="e12">
+      <div class="card">
+        <div class="face front">
+          <div class="number">12</div>
+          <div class="symbol">Cn</div>
+          <div class="name">Context</div>
+        </div>
+        <div class="face back"><div class="line">More coming soon…</div></div>
+      </div>
+    </label>
+  </div>
+  <div class="spacer"></div>
+  <div class="spacer"></div>
+  <div class="spacer"></div>
+  <div class="spacer"></div>
+  <div class="spacer"></div>
+  <div class="spacer"></div>
+  <div class="spacer"></div>
+  <div class="spacer"></div>
+  <div class="spacer"></div>
+  <div class="spacer"></div>
+  <div class="element ai">
+    <input type="checkbox" id="e13" hidden>
+    <label for="e13">
+      <div class="card">
+        <div class="face front">
+          <div class="number">13</div>
+          <div class="symbol">Ai</div>
+          <div class="name">AI Disclosure</div>
+        </div>
+        <div class="face back"><div class="line">More coming soon…</div></div>
+      </div>
+    </label>
+  </div>
+  <div class="element structure">
+    <input type="checkbox" id="e14" hidden>
+    <label for="e14">
+      <div class="card">
+        <div class="face front">
+          <div class="number">14</div>
+          <div class="symbol">Fm</div>
+          <div class="name">Format</div>
+        </div>
+        <div class="face back"><div class="line">More coming soon…</div></div>
+      </div>
+    </label>
+  </div>
+  <div class="element attribution">
+    <input type="checkbox" id="e15" hidden>
+    <label for="e15">
+      <div class="card">
+        <div class="face front">
+          <div class="number">15</div>
+          <div class="symbol">Ln</div>
+          <div class="name">Linking</div>
+        </div>
+        <div class="face back"><div class="line">More coming soon…</div></div>
+      </div>
+    </label>
+  </div>
+  <div class="element audience">
+    <input type="checkbox" id="e16" hidden>
+    <label for="e16">
+      <div class="card">
+        <div class="face front">
+          <div class="number">16</div>
+          <div class="symbol">To</div>
+          <div class="name">Tone</div>
+        </div>
+        <div class="face back"><div class="line">More coming soon…</div></div>
+      </div>
+    </label>
+  </div>
+  <div class="element audience">
+    <input type="checkbox" id="e17" hidden>
+    <label for="e17">
+      <div class="card">
+        <div class="face front">
+          <div class="number">17</div>
+          <div class="symbol">Fb</div>
+          <div class="name">Feedback</div>
+        </div>
+        <div class="face back"><div class="line">More coming soon…</div></div>
+      </div>
+    </label>
+  </div>
+  <div class="element audience">
+    <input type="checkbox" id="e18" hidden>
+    <label for="e18">
+      <div class="card">
+        <div class="face front">
+          <div class="number">18</div>
+          <div class="symbol">Eg</div>
+          <div class="name">Engagement</div>
+        </div>
+        <div class="face back"><div class="line">More coming soon…</div></div>
+      </div>
+    </label>
+  </div>
+  <div class="element ethics">
+    <input type="checkbox" id="e19" hidden>
+    <label for="e19">
+      <div class="card">
+        <div class="face front">
+          <div class="number">19</div>
+          <div class="symbol">Em</div>
+          <div class="name">Empathy</div>
+        </div>
+        <div class="face back"><div class="line">More coming soon…</div></div>
+      </div>
+    </label>
+  </div>
+  <div class="element writing">
+    <input type="checkbox" id="e20" hidden>
+    <label for="e20">
+      <div class="card">
+        <div class="face front">
+          <div class="number">20</div>
+          <div class="symbol">Br</div>
+          <div class="name">Brevity</div>
+        </div>
+        <div class="face back"><div class="line">More coming soon…</div></div>
+      </div>
+    </label>
+  </div>
+  <div class="element structure">
+    <input type="checkbox" id="e21" hidden>
+    <label for="e21">
+      <div class="card">
+        <div class="face front">
+          <div class="number">21</div>
+          <div class="symbol">Rv</div>
+          <div class="name">Relevance</div>
+        </div>
+        <div class="face back"><div class="line">More coming soon…</div></div>
+      </div>
+    </label>
+  </div>
+  <div class="element structure">
+    <input type="checkbox" id="e22" hidden>
+    <label for="e22">
+      <div class="card">
+        <div class="face front">
+          <div class="number">22</div>
+          <div class="symbol">Ad</div>
+          <div class="name">Adaptability</div>
+        </div>
+        <div class="face back"><div class="line">More coming soon…</div></div>
+      </div>
+    </label>
+  </div>
+  <div class="element audience">
+    <input type="checkbox" id="e23" hidden>
+    <label for="e23">
+      <div class="card">
+        <div class="face front">
+          <div class="number">23</div>
+          <div class="symbol">Cb</div>
+          <div class="name">Collaboration</div>
+        </div>
+        <div class="face back"><div class="line">More coming soon…</div></div>
+      </div>
+    </label>
+  </div>
+  <div class="element strategy">
+    <input type="checkbox" id="e24" hidden>
+    <label for="e24">
+      <div class="card">
+        <div class="face front">
+          <div class="number">24</div>
+          <div class="symbol">Gr</div>
+          <div class="name">Growth</div>
+        </div>
+        <div class="face back"><div class="line">More coming soon…</div></div>
+      </div>
+    </label>
+  </div>
+  <div class="element strategy">
+    <input type="checkbox" id="e25" hidden>
+    <label for="e25">
+      <div class="card">
+        <div class="face front">
+          <div class="number">25</div>
+          <div class="symbol">Rf</div>
+          <div class="name">Reflection</div>
+        </div>
+        <div class="face back"><div class="line">More coming soon…</div></div>
+      </div>
+    </label>
+  </div>
+  <div class="element structure">
+    <input type="checkbox" id="e26" hidden>
+    <label for="e26">
+      <div class="card">
+        <div class="face front">
+          <div class="number">26</div>
+          <div class="symbol">Fx</div>
+          <div class="name">Flexibility</div>
+        </div>
+        <div class="face back"><div class="line">More coming soon…</div></div>
+      </div>
+    </label>
+  </div>
+  <div class="element strategy">
+    <input type="checkbox" id="e27" hidden>
+    <label for="e27">
+      <div class="card">
+        <div class="face front">
+          <div class="number">27</div>
+          <div class="symbol">Al</div>
+          <div class="name">Alignment</div>
+        </div>
+        <div class="face back"><div class="line">More coming soon…</div></div>
+      </div>
+    </label>
+  </div>
+  <div class="element ethics">
+    <input type="checkbox" id="e28" hidden>
+    <label for="e28">
+      <div class="card">
+        <div class="face front">
+          <div class="number">28</div>
+          <div class="symbol">Ig</div>
+          <div class="name">Integrity</div>
+        </div>
+        <div class="face back"><div class="line">More coming soon…</div></div>
+      </div>
+    </label>
+  </div>
+  <div class="element ethics">
+    <input type="checkbox" id="e29" hidden>
+    <label for="e29">
+      <div class="card">
+        <div class="face front">
+          <div class="number">29</div>
+          <div class="symbol">Au</div>
+          <div class="name">Authenticity</div>
+        </div>
+        <div class="face back"><div class="line">More coming soon…</div></div>
+      </div>
+    </label>
+  </div>
+  <div class="element audience">
+    <input type="checkbox" id="e30" hidden>
+    <label for="e30">
+      <div class="card">
+        <div class="face front">
+          <div class="number">30</div>
+          <div class="symbol">Ap</div>
+          <div class="name">Approachability</div>
+        </div>
+        <div class="face back"><div class="line">More coming soon…</div></div>
+      </div>
+    </label>
+  </div>
+  <div class="element audience">
+    <input type="checkbox" id="e31" hidden>
+    <label for="e31">
+      <div class="card">
+        <div class="face front">
+          <div class="number">31</div>
+          <div class="symbol">Ha</div>
+          <div class="name">Harmony</div>
+        </div>
+        <div class="face back"><div class="line">More coming soon…</div></div>
+      </div>
+    </label>
+  </div>
+  <div class="element audience">
+    <input type="checkbox" id="e32" hidden>
+    <label for="e32">
+      <div class="card">
+        <div class="face front">
+          <div class="number">32</div>
+          <div class="symbol">Ax</div>
+          <div class="name">Accessibility</div>
+        </div>
+        <div class="face back"><div class="line">More coming soon…</div></div>
+      </div>
+    </label>
+  </div>
+  <div class="element strategy">
+    <input type="checkbox" id="e33" hidden>
+    <label for="e33">
+      <div class="card">
+        <div class="face front">
+          <div class="number">33</div>
+          <div class="symbol">Sc</div>
+          <div class="name">Security</div>
+        </div>
+        <div class="face back"><div class="line">More coming soon…</div></div>
+      </div>
+    </label>
+  </div>
+  <div class="element structure">
+    <input type="checkbox" id="e34" hidden>
+    <label for="e34">
+      <div class="card">
+        <div class="face front">
+          <div class="number">34</div>
+          <div class="symbol">Ef</div>
+          <div class="name">Efficiency</div>
+        </div>
+        <div class="face back"><div class="line">More coming soon…</div></div>
+      </div>
+    </label>
+  </div>
+  <div class="element strategy">
+    <input type="checkbox" id="e35" hidden>
+    <label for="e35">
+      <div class="card">
+        <div class="face front">
+          <div class="number">35</div>
+          <div class="symbol">Rs</div>
+          <div class="name">Resilience</div>
+        </div>
+        <div class="face back"><div class="line">More coming soon…</div></div>
+      </div>
+    </label>
+  </div>
+  <div class="element strategy">
+    <input type="checkbox" id="e36" hidden>
+    <label for="e36">
+      <div class="card">
+        <div class="face front">
+          <div class="number">36</div>
+          <div class="symbol">Rl</div>
+          <div class="name">Reliability</div>
+        </div>
+        <div class="face back"><div class="line">More coming soon…</div></div>
+      </div>
+    </label>
+  </div>
+</div>
+<section class="lan-act">Lanthanides &amp; Actinides coming soon…</section>
+</body>
+</html>
